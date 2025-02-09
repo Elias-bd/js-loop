@@ -96,12 +96,28 @@ As Ersa is learning now, she wants to explore more and more. Tell Ersa to genera
 
  */
 
-let number = 5;
-let limit = 10;
-console.log('Multiplication table for:', number);
+// let number = 5;
+// let limit = 10;
+// console.log('Multiplication table for:', number);
 
-for (let i = 1; i <= limit; i++){
-    let result = number * i;
-    console.log(`${number} x ${i} = ${result}`);
+// for (let i = 1; i <= limit; i++){
+//     let result = number * i;
+//     console.log(`${number} x ${i} = ${result}`);
     // console.log('{$}', number, '{x}', '{$}', i = '{$}', result);
+// }
+
+let count = 21;
+function updateTimer(){
+    console.log(`countdown : ${count}`);
+
+    if (count > 15){
+        count --;
+    }
+    else{
+        clearInterval(interval);
+    }
 }
+
+const interval = setInterval(updateTimer, 1000);
+
+updateTimer();
